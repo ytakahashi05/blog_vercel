@@ -27,8 +27,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({params}: any) => {
 	const {id} = params
 	const {data} = await getBlogBy(id)
-	const htmlContent = markdownToHtml(data.content);
-	return {props: {...data, htmlContent}}
+	return {props: {...data}}
 }
 
 export default BlogItemPage
