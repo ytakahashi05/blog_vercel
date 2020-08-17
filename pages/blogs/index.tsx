@@ -69,10 +69,12 @@ const BlogTable = ({contents}: any) => {
 				<TableBody>
 					{contents.map((content: any) => (
 						<TableRow key={content.id}>
-							<TableCell>{content.date}</TableCell>
-							<TableCell>
-								<Link href="/blogs/[id]" as={`/blogs/${content.id}`}><a>{content.title}</a></Link>
-							</TableCell>
+							<TableCell>{content.date.split("T")[0]}</TableCell>
+							<Link href="/blogs/[id]" as={`/blogs/${content.id}`}>
+								<TableCell style={{cursor: "pointer"}}>
+									<a>{content.title}</a>
+								</TableCell>
+							</Link>
 						</TableRow>
 					))}
 				</TableBody>
