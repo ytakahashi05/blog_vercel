@@ -29,7 +29,7 @@ const Blogs: NextPage = (props: any) => {
 	const {contents} = props;
 	return (
 		<>
-			<div className="header">
+			<div className="header" style={{fontSize: "2em", padding: "10px"}}>
 				<span>記事一覧</span>
 			</div>
 			<BlogTable contents={contents} />
@@ -58,7 +58,7 @@ const BlogTable = ({contents}: any) => {
 		)(TableCell);
 		
 	return (
-		<TableContainer component={Paper}>
+		<TableContainer component={Paper} style={{width: "70%", }}>
 			<Table className={classes.table} aria-label="simple table">
 				<TableHead>
 					<TableRow>
