@@ -30,7 +30,7 @@ const Blogs: NextPage = (props: any) => {
 	return (
 		<>
 			<div className="header" style={{fontSize: "2em", padding: "10px"}}>
-				<span>記事一覧</span>
+				<span>記事一覧dayo</span>
 			</div>
 			<BlogTable contents={contents} />
 		</>
